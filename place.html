@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uganda</title>
+  <title>Uganda | Country Page</title>
+
   <link rel="stylesheet" href="styles/place.css">
-  <link rel="stylesheet" href="styles/place-large.css">
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
@@ -15,39 +15,36 @@
 </header>
 
 <main>
+  <!-- Hero Section -->
   <section class="hero">
     <picture>
-      <source srcset="images/uganda-large.webp" media="(min-width: 768px)">
-      <img src="images/ugandan-flag.webp" alt="Landscape of Uganda">
+      <source srcset="images/crane.jpg" media="(min-width: 768px)">
+      <img src="images/crane.jpg" alt="Uganda landscape" width="800" height="400">
     </picture>
   </section>
 
+  <!-- Content -->
   <section class="content">
-    <section class="about">
+    <article class="card about">
       <h2>About Uganda</h2>
-      <p>
-        Uganda is known as the Pearl of Africa, rich in natural beauty, wildlife,
-        and diverse cultures. It lies in East Africa and is home to Lake Victoria.
-      </p>
-    </section>
+      <p>Uganda, known as the Pearl of Africa, has rich wildlife, culture, and beautiful landscapes. Lake Victoria is Africa's largest lake.</p>
+    </article>
 
-    <section class="weather">
+    <article class="card weather">
       <h2>Weather</h2>
-      <div class="weather-box">
-        <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
-        <p>Temperature: <span id="temp">28</span> °C</p>
-        <p>Wind Speed: <span id="speed">10</span> km/h</p>
-        <p>Wind Chill: <span id="windchill"></span></p>
-      </div>
-    </section>
+      <!-- Mobile SVG icon -->
+      <img src="images/weathericon.png" alt="Weather icon" class="weather-icon">
+
+      <p>Temperature: <span id="temp">10</span> °C</p>
+      <p>Wind Speed: <span id="wind">10</span> km/h</p>
+      <p>Wind Chill: <span id="windchill"></span></p>
+    </article>
   </section>
 </main>
 
 <footer>
-  <p>
-    © <span id="year"></span> | Bright Wamala | Last Modified:
-    <span id="modified"></span>
-  </p>
+  <p>© <span id="year"></span> | Wamala Bright | Uganda</p>
+  <p>Last Modified: <span id="modified"></span></p>
 </footer>
 
 </body>
