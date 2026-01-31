@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media (min-width: 768px) {
 
   .content {
@@ -11,3 +12,15 @@
   }
 
 }
+=======
+@media (min-width: 768px) {
+
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  
+}
+>>>>>>> c064025da7dc2f22b5b5e4b498ef571746c153d6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --primary: #000000;
   --secondary: #fcd116;
@@ -77,3 +78,74 @@ footer {
     display: none; /* hide SVG */
   }
 }
+=======
+:root {
+  --primary: #000000;
+  --secondary: #fcd116;
+  --accent: #d90000;
+  --bg: #ffffff;
+  --text: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Hero */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content cards */
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background: white;
+}
+
+.weather-icon {
+  width: 48px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--accent);
+  color: white;
+  margin-top: 1rem;
+}
+
+/* Desktop / wider screens */
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: 2fr 1fr; /* About | Weather */
+  }
+}
+>>>>>>> c064025da7dc2f22b5b5e4b498ef571746c153d6
