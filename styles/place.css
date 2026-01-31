@@ -1,0 +1,37 @@
+:root {
+  --primary: #000000;
+  --secondary: #fcdc04;
+  --accent: #d90000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.weather-icon {
+  width: 50px;
+}
+
+footer {
+  background: var(--secondary);
+  text-align: center;
+  padding: 1rem;
+}

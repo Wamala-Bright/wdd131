@@ -1,0 +1,13 @@
+@media (min-width: 768px) {
+
+  .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+  }
+
+}

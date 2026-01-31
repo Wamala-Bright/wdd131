@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uganda</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Uganda</h1>
+</header>
+
+<main>
+  <section class="hero">
+    <picture>
+      <source srcset="images/uganda-large.webp" media="(min-width: 768px)">
+      <img src="images/ugandan-flag.webp" alt="Landscape of Uganda">
+    </picture>
+  </section>
+
+  <section class="content">
+    <section class="about">
+      <h2>About Uganda</h2>
+      <p>
+        Uganda is known as the Pearl of Africa, rich in natural beauty, wildlife,
+        and diverse cultures. It lies in East Africa and is home to Lake Victoria.
+      </p>
+    </section>
+
+    <section class="weather">
+      <h2>Weather</h2>
+      <div class="weather-box">
+        <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+        <p>Temperature: <span id="temp">28</span> °C</p>
+        <p>Wind Speed: <span id="speed">10</span> km/h</p>
+        <p>Wind Chill: <span id="windchill"></span></p>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <p>
+    © <span id="year"></span> | Bright Wamala | Last Modified:
+    <span id="modified"></span>
+  </p>
+</footer>
+
+</body>
+</html>
