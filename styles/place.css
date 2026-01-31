@@ -66,14 +66,4 @@ footer {
   .content {
     grid-template-columns: 2fr 1fr; /* About | Weather */
   }
-
-  /* Weather pseudo-element ⛅ */
-  .weather h2::after {
-    content: " ⛅";
-    margin-left: 0.5rem;
-  }
-
-  .weather-icon {
-    display: none; /* hide SVG */
-  }
 }
