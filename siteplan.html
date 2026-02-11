@@ -14,6 +14,8 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="styles/siteplan.css">
+  <script src="scripts/siteplan.js" defer></script>
+
 </head>
 <body>
 
@@ -119,46 +121,65 @@
   <h2>Feedback Form</h2>
 
   <form method="get" action="review.html">
-    <!-- Dropdown -->
-    <label for="temple">Choose a temple:</label>
-    <select id="temple" name="temple" required>
-      <option value="" disabled selected>Select a temple</option>
-      <option value="salt_lake">Salt Lake Temple</option>
-      <option value="la">Los Angeles Temple</option>
-      <option value="nauvoo">Nauvoo Temple</option>
+    <!-- Dropdown / Select -->
+    <label for="product">Choose a Product:</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Select a Product …</option>
+      <option value="temple_album">Temple Album</option>
+      <option value="temple_photos">Temple Photos</option>
+      <option value="temple_maps">Temple Maps</option>
     </select>
 
-    <!-- Radio Buttons -->
+    <!-- Radio Buttons (5 options) -->
     <fieldset>
       <legend>Rate the website layout:</legend>
-      <label><input type="radio" name="layout" value="excellent" required> Excellent</label>
-      <label><input type="radio" name="layout" value="good"> Good</label>
-      <label><input type="radio" name="layout" value="average"> Average</label>
-      <label><input type="radio" name="layout" value="poor"> Poor</label>
-      <label><input type="radio" name="layout" value="terrible"> Terrible</label>
+
+      <input type="radio" id="layout1" name="layout" value="excellent" required>
+      <label for="layout1">Excellent</label>
+
+      <input type="radio" id="layout2" name="layout" value="good" required>
+      <label for="layout2">Good</label>
+
+      <input type="radio" id="layout3" name="layout" value="average" required>
+      <label for="layout3">Average</label>
+
+      <input type="radio" id="layout4" name="layout" value="poor" required>
+      <label for="layout4">Poor</label>
+
+      <input type="radio" id="layout5" name="layout" value="terrible" required>
+      <label for="layout5">Terrible</label>
     </fieldset>
 
-    <!-- Date -->
+    <!-- Date Input -->
     <label for="visit-date">Date of visit:</label>
     <input type="date" id="visit-date" name="visit-date" required>
 
-    <!-- Checkboxes -->
+    <!-- Checkboxes (4 options) -->
     <fieldset>
       <legend>Features you liked (check all that apply):</legend>
-      <label><input type="checkbox" name="features" value="photos"> Photos</label>
-      <label><input type="checkbox" name="features" value="info"> Temple Info</label>
-      <label><input type="checkbox" name="features" value="map"> Map Integration</label>
-      <label><input type="checkbox" name="features" value="filter"> Filtering Options</label>
+
+      <input type="checkbox" id="feature1" name="features" value="photos">
+      <label for="feature1">Photos</label>
+
+      <input type="checkbox" id="feature2" name="features" value="info">
+      <label for="feature2">Temple Info</label>
+
+      <input type="checkbox" id="feature3" name="features" value="map">
+      <label for="feature3">Map Integration</label>
+
+      <input type="checkbox" id="feature4" name="features" value="filter">
+      <label for="feature4">Filtering Options</label>
     </fieldset>
 
     <!-- Textarea -->
     <label for="comments">Additional comments:</label>
     <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
 
-    <!-- Submit -->
+    <!-- Submit Button -->
     <input type="submit" value="Submit Feedback">
   </form>
 </section>
+
 
 <footer>
   <p>&copy; 2026 Temple Album Site Plan</p>
