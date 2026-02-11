@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Wamala Bright">
   <meta name="description" content="Site plan for the Temple Album project including purpose, color scheme, typography, and wireframes.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temple Album – Site Plan</title>
@@ -11,128 +12,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --primary: #1f3a5f;
-      --accent: #f4d35e;
-      --light: #ffffff;
-      --bg: #f5f7fa;
-    }
-  
-   header {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-header img {
-  height: 60px;
-}
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: var(--bg);
-      color: #222;
-      margin: 0;
-      padding: 1rem;
-      line-height: 1.6;
-    }
-
-    h1, h2 {
-      color: var(--primary);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    section {
-      background: var(--light);
-      padding: 1.25rem;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,.1);
-    }
-
-    ul {
-      margin-left: 1.5rem;
-    }
-
-    /* Color swatches */
-    .colors {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .color-card {
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .swatch {
-      width: 70px;
-      height: 70px;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-      border: 1px solid #ccc;
-    }
-
-    /* Wireframes */
-    .wireframes {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .wireframe {
-      border: 2px dashed #aaa;
-      padding: 1rem;
-      border-radius: 8px;
-      background: #fafafa;
-    }
-
-    .wf-header,
-    .wf-footer {
-      background: var(--primary);
-      color: white;
-      padding: 0.5rem;
-      text-align: center;
-      border-radius: 6px;
-    }
-
-    .wf-gallery {
-      display: grid;
-      gap: 0.5rem;
-      margin: 1rem 0;
-    }
-
-    .wf-box {
-      background: #ddd;
-      height: 80px;
-      border-radius: 6px;
-    }
-
-    .desktop .wf-gallery {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .mobile .wf-gallery {
-      grid-template-columns: 1fr;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 <body>
 
 <header>
-  <img src="images/Lds-logo.png" alt="LDS Logo">
+  <img src="images/lds-logo.png" alt="LDS Logo">
 </header>
+
 <h1>Temple Album – Website Plan</h1>
 
 <section>
@@ -167,19 +55,19 @@ header img {
 <section>
   <h2>Color Schema (Click a color)</h2>
   <div class="colors">
-    <div class="color-card" onclick="alert('Used for headers, navigation, and footer')">
+    <div class="color-card" data-message="Used for headers, navigation, and footer">
       <div class="swatch" style="background:#1f3a5f"></div>
       <strong>Primary</strong>
       <p>#1f3a5f</p>
     </div>
 
-    <div class="color-card" onclick="alert('Used for buttons, highlights, and hover states')">
+    <div class="color-card" data-message="Used for buttons, highlights, and hover states">
       <div class="swatch" style="background:#f4d35e"></div>
       <strong>Accent</strong>
       <p>#f4d35e</p>
     </div>
 
-    <div class="color-card" onclick="alert('Used for backgrounds and cards')">
+    <div class="color-card" data-message="Used for backgrounds and cards">
       <div class="swatch" style="background:#ffffff"></div>
       <strong>Neutral</strong>
       <p>#ffffff</p>
@@ -245,6 +133,15 @@ header img {
 <footer>
   <p>&copy; 2026 Temple Album Site Plan</p>
 </footer>
+
+<!-- JS -->
+<script>
+  document.querySelectorAll(".color-card").forEach(card => {
+    card.addEventListener("click", () => {
+      alert(card.dataset.message);
+    });
+  });
+</script>
 
 </body>
 </html>

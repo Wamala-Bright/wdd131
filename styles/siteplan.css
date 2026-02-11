@@ -1,0 +1,114 @@
+:root {
+  --primary: #1f3a5f;
+  --accent: #f4d35e;
+  --light: #ffffff;
+  --bg: #f5f7fa;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--bg);
+  color: #222;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+header {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+header img {
+  height: 60px;
+}
+
+h1, h2 {
+  color: var(--primary);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  background: var(--light);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+/* Color swatches */
+.colors {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.color-card {
+  cursor: pointer;
+  text-align: center;
+}
+
+.swatch {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* Wireframes */
+.wireframes {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.wireframe {
+  border: 2px dashed #aaa;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.wf-header,
+.wf-footer {
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.wf-gallery {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.wf-box {
+  background: #ddd;
+  height: 80px;
+  border-radius: 6px;
+}
+
+.desktop .wf-gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mobile .wf-gallery {
+  grid-template-columns: 1fr;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
