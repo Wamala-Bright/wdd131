@@ -45,7 +45,7 @@ ul {
   margin-left: 1.5rem;
 }
 
-/* Color swatches */
+/* Color Swatches */
 .colors {
   display: flex;
   gap: 1.5rem;
@@ -65,11 +65,12 @@ ul {
   border: 1px solid #ccc;
 }
 
+.swatch.primary { background: var(--primary); }
+.swatch.accent { background: var(--accent); }
+.swatch.neutral { background: var(--light); }
+
 /* Wireframes */
-.wireframes {
-  display: grid;
-  gap: 1.5rem;
-}
+.wireframes { display: grid; gap: 1.5rem; }
 
 .wireframe {
   border: 2px dashed #aaa;
@@ -78,8 +79,7 @@ ul {
   background: #fafafa;
 }
 
-.wf-header,
-.wf-footer {
+.wf-header, .wf-footer {
   background: var(--primary);
   color: white;
   padding: 0.5rem;
@@ -87,11 +87,7 @@ ul {
   border-radius: 6px;
 }
 
-.wf-gallery {
-  display: grid;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
+.wf-gallery { display: grid; gap: 0.5rem; margin: 1rem 0; }
 
 .wf-box {
   background: #ddd;
@@ -99,16 +95,17 @@ ul {
   border-radius: 6px;
 }
 
-.desktop .wf-gallery {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.mobile .wf-gallery {
-  grid-template-columns: 1fr;
-}
+.desktop .wf-gallery { grid-template-columns: repeat(3, 1fr); }
+.mobile .wf-gallery { grid-template-columns: 1fr; }
 
 footer {
   text-align: center;
   font-size: 0.9rem;
   color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .desktop .wf-gallery { grid-template-columns: 1fr; }
+  .colors { flex-direction: column; gap: 1rem; }
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Wamala Bright">
-  <meta name="description" content="Site plan for the Temple Album project including purpose, color scheme, typography, and wireframes.">
+  <meta name="description" content="Site plan for the Temple Album project including purpose, color scheme, typography, wireframes, and feedback form.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Temple Album – Site Plan</title>
 
@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 <body>
@@ -23,6 +23,7 @@
 
 <h1>Temple Album – Website Plan</h1>
 
+<!-- Site Description Sections -->
 <section>
   <h2>Site Name</h2>
   <p><strong>Temple Album</strong></p>
@@ -52,29 +53,29 @@
   </ul>
 </section>
 
+<!-- Color Schema -->
 <section>
   <h2>Color Schema (Click a color)</h2>
   <div class="colors">
     <div class="color-card" data-message="Used for headers, navigation, and footer">
-      <div class="swatch" style="background:#1f3a5f"></div>
+      <div class="swatch primary"></div>
       <strong>Primary</strong>
       <p>#1f3a5f</p>
     </div>
-
     <div class="color-card" data-message="Used for buttons, highlights, and hover states">
-      <div class="swatch" style="background:#f4d35e"></div>
+      <div class="swatch accent"></div>
       <strong>Accent</strong>
       <p>#f4d35e</p>
     </div>
-
     <div class="color-card" data-message="Used for backgrounds and cards">
-      <div class="swatch" style="background:#ffffff"></div>
+      <div class="swatch neutral"></div>
       <strong>Neutral</strong>
       <p>#ffffff</p>
     </div>
   </div>
 </section>
 
+<!-- Typography -->
 <section>
   <h2>Typography</h2>
   <ul>
@@ -83,6 +84,7 @@
   </ul>
 </section>
 
+<!-- Wireframes -->
 <section>
   <h2>Wireframes</h2>
 
@@ -112,36 +114,58 @@
   </div>
 </section>
 
+<!-- Feedback Form -->
 <section>
-  <h2>CSS</h2>
-  <p>
-    CSS will be used to create a responsive grid gallery, style navigation menus,
-    apply the color scheme, and ensure readability and accessibility across devices.
-  </p>
-</section>
+  <h2>Feedback Form</h2>
 
-<section>
-  <h2>Testing</h2>
-  <ul>
-    <li>HTML & CSS validation (W3C)</li>
-    <li>Accessibility checks (Lighthouse)</li>
-    <li>Color contrast testing</li>
-    <li>SEO and performance evaluation</li>
-  </ul>
+  <form method="get" action="review.html">
+    <!-- Dropdown -->
+    <label for="temple">Choose a temple:</label>
+    <select id="temple" name="temple" required>
+      <option value="" disabled selected>Select a temple</option>
+      <option value="salt_lake">Salt Lake Temple</option>
+      <option value="la">Los Angeles Temple</option>
+      <option value="nauvoo">Nauvoo Temple</option>
+    </select>
+
+    <!-- Radio Buttons -->
+    <fieldset>
+      <legend>Rate the website layout:</legend>
+      <label><input type="radio" name="layout" value="excellent" required> Excellent</label>
+      <label><input type="radio" name="layout" value="good"> Good</label>
+      <label><input type="radio" name="layout" value="average"> Average</label>
+      <label><input type="radio" name="layout" value="poor"> Poor</label>
+      <label><input type="radio" name="layout" value="terrible"> Terrible</label>
+    </fieldset>
+
+    <!-- Date -->
+    <label for="visit-date">Date of visit:</label>
+    <input type="date" id="visit-date" name="visit-date" required>
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Features you liked (check all that apply):</legend>
+      <label><input type="checkbox" name="features" value="photos"> Photos</label>
+      <label><input type="checkbox" name="features" value="info"> Temple Info</label>
+      <label><input type="checkbox" name="features" value="map"> Map Integration</label>
+      <label><input type="checkbox" name="features" value="filter"> Filtering Options</label>
+    </fieldset>
+
+    <!-- Textarea -->
+    <label for="comments">Additional comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
+
+    <!-- Submit -->
+    <input type="submit" value="Submit Feedback">
+  </form>
 </section>
 
 <footer>
   <p>&copy; 2026 Temple Album Site Plan</p>
 </footer>
 
-<!-- JS -->
-<script>
-  document.querySelectorAll(".color-card").forEach(card => {
-    card.addEventListener("click", () => {
-      alert(card.dataset.message);
-    });
-  });
-</script>
+<!-- External JS -->
+<script src="scripts/siteplan.js" defer></script>
 
 </body>
 </html>
