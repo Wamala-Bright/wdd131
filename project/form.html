@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Wamala Bright">
+  <meta name="description" content="Feedback form for the Temple Album website of The Church of Jesus Christ of Latter-day Saints.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album | Feedback</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<header>
+  <img src="images/lds-logo.png" alt="Church of Jesus Christ of Latter-day Saints logo">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="temples.html">Temples</a></li>
+      <li><a href="form.html" class="active">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Website Feedback</h1>
+  <p>
+    We appreciate your feedback. Your thoughts help improve the Temple Album
+    experience and ensure the content is informative, respectful, and uplifting.
+  </p>
+
+  <div class="form-container">
+    <form id="feedbackForm" method="get" action="review.html">
+
+      <!-- PAGE SELECT -->
+      <label for="page">Which page are you giving feedback on?</label>
+      <select id="page" name="page" required>
+        <option value="" selected disabled>Select a page...</option>
+        <option value="Home">Home</option>
+        <option value="Temples">Temples</option>
+        <option value="Feedback">Feedback</option>
+      </select>
+
+      <!-- RATING -->
+      <fieldset>
+        <legend>Overall Experience</legend>
+
+        <input type="radio" id="rate1" name="rating" value="1" required>
+        <label for="rate1">Very Poor</label>
+
+        <input type="radio" id="rate2" name="rating" value="2">
+        <label for="rate2">Poor</label>
+
+        <input type="radio" id="rate3" name="rating" value="3">
+        <label for="rate3">Fair</label>
+
+        <input type="radio" id="rate4" name="rating" value="4">
+        <label for="rate4">Good</label>
+
+        <input type="radio" id="rate5" name="rating" value="5">
+        <label for="rate5">Excellent</label>
+      </fieldset>
+
+      <!-- VISIT DATE -->
+      <label for="visitDate">Date of Visit</label>
+      <input type="date" id="visitDate" name="visitDate" required>
+
+      <!-- CHECKBOXES -->
+      <fieldset>
+        <legend>What did you find helpful?</legend>
+
+        <input type="checkbox" id="content" name="features" value="Content">
+        <label for="content">Inspirational Content</label>
+
+        <input type="checkbox" id="design" name="features" value="Design">
+        <label for="design">Design & Layout</label>
+
+        <input type="checkbox" id="images" name="features" value="Images">
+        <label for="images">Images & Visuals</label>
+
+        <input type="checkbox" id="navigation" name="features" value="Navigation">
+        <label for="navigation">Easy Navigation</label>
+      </fieldset>
+
+      <!-- COMMENTS -->
+      <label for="comments">
+        Additional Comments <span class="optional">(Optional)</span>
+      </label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+
+      <!-- NAME -->
+      <label for="userName">
+        Your Name <span class="optional">(Optional)</span>
+      </label>
+      <input type="text" id="userName" name="userName">
+
+      <!-- SUBMIT -->
+      <input type="submit" value="Submit Feedback">
+
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Temple Album</p>
+  <a href="references.html">References</a>
+</footer>
+
+</body>
+</html>

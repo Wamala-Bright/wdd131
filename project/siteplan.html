@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Wamala Bright">
+  <meta name="description" content="Site plan for the Temple Album project including purpose, color scheme, typography, wireframes, and feedback form.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album – Site Plan</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/siteplan.css">
+  <script src="scripts/siteplan.js" defer></script>
+
+</head>
+<body>
+
+<header>
+  <img src="images/lds-logo.png" alt="LDS Logo">
+</header>
+
+<h1>Temple Album – Website Plan</h1>
+
+<!-- Site Description Sections -->
+<section>
+  <h2>Site Name</h2>
+  <p><strong>Temple Album</strong></p>
+  <p>
+    Temple Album is a website dedicated to showcasing LDS temples around the world.
+    The name was chosen because it reflects a visual and informational collection
+    that users can explore like a digital album.
+  </p>
+  <p>Optional domain: <em>temple-album.org</em></p>
+</section>
+
+<section>
+  <h2>Site Purpose</h2>
+  <p>
+    The purpose of the Temple Album website is to provide users with an organized,
+    visually appealing collection of LDS temples. Visitors can browse temples,
+    filter them by characteristics such as age or size, and learn basic historical
+    details about each temple.
+  </p>
+</section>
+
+<section>
+  <h2>Scenarios</h2>
+  <ul>
+    <li>Which temples were dedicated before 1900?</li>
+    <li>How can I filter temples to see only large or recently built ones?</li>
+  </ul>
+</section>
+
+<!-- Color Schema -->
+<section>
+  <h2>Color Schema (Click a color)</h2>
+  <div class="colors">
+    <div class="color-card" data-message="Used for headers, navigation, and footer">
+      <div class="swatch primary"></div>
+      <strong>Primary</strong>
+      <p>#1f3a5f</p>
+    </div>
+    <div class="color-card" data-message="Used for buttons, highlights, and hover states">
+      <div class="swatch accent"></div>
+      <strong>Accent</strong>
+      <p>#f4d35e</p>
+    </div>
+    <div class="color-card" data-message="Used for backgrounds and cards">
+      <div class="swatch neutral"></div>
+      <strong>Neutral</strong>
+      <p>#ffffff</p>
+    </div>
+  </div>
+</section>
+
+<!-- Typography -->
+<section>
+  <h2>Typography</h2>
+  <ul>
+    <li><strong>Roboto Regular:</strong> Body text and paragraphs</li>
+    <li><strong>Roboto Bold:</strong> Headings, navigation links, and labels</li>
+  </ul>
+</section>
+
+<!-- Wireframes -->
+<section>
+  <h2>Wireframes</h2>
+
+  <h3>Mobile View</h3>
+  <div class="wireframe mobile">
+    <div class="wf-header">Header / Menu</div>
+    <div class="wf-gallery">
+      <div class="wf-box"></div>
+      <div class="wf-box"></div>
+      <div class="wf-box"></div>
+    </div>
+    <div class="wf-footer">Footer</div>
+  </div>
+
+  <h3>Desktop View</h3>
+  <div class="wireframe desktop">
+    <div class="wf-header">Header / Navigation</div>
+    <div class="wf-gallery">
+      <div class="wf-box"></div>
+      <div class="wf-box"></div>
+      <div class="wf-box"></div>
+      <div class="wf-box"></div>
+      <div class="wf-box"></div>
+      <div class="wf-box"></div>
+    </div>
+    <div class="wf-footer">Footer</div>
+  </div>
+</section>
+
+<!-- Feedback Form -->
+<section>
+  <h2>Feedback Form</h2>
+
+  <form method="get" action="review.html">
+    <!-- Dropdown / Select -->
+    <label for="product">Choose a Product:</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Select a Product …</option>
+      <option value="temple_album">Temple Album</option>
+      <option value="temple_photos">Temple Photos</option>
+      <option value="temple_maps">Temple Maps</option>
+    </select>
+
+    <!-- Radio Buttons (5 options) -->
+    <fieldset>
+      <legend>Rate the website layout:</legend>
+
+      <input type="radio" id="layout1" name="layout" value="excellent" required>
+      <label for="layout1">Excellent</label>
+
+      <input type="radio" id="layout2" name="layout" value="good" required>
+      <label for="layout2">Good</label>
+
+      <input type="radio" id="layout3" name="layout" value="average" required>
+      <label for="layout3">Average</label>
+
+      <input type="radio" id="layout4" name="layout" value="poor" required>
+      <label for="layout4">Poor</label>
+
+      <input type="radio" id="layout5" name="layout" value="terrible" required>
+      <label for="layout5">Terrible</label>
+    </fieldset>
+
+    <!-- Date Input -->
+    <label for="visit-date">Date of visit:</label>
+    <input type="date" id="visit-date" name="visit-date" required>
+
+    <!-- Checkboxes (4 options) -->
+    <fieldset>
+      <legend>Features you liked (check all that apply):</legend>
+
+      <input type="checkbox" id="feature1" name="features" value="photos">
+      <label for="feature1">Photos</label>
+
+      <input type="checkbox" id="feature2" name="features" value="info">
+      <label for="feature2">Temple Info</label>
+
+      <input type="checkbox" id="feature3" name="features" value="map">
+      <label for="feature3">Map Integration</label>
+
+      <input type="checkbox" id="feature4" name="features" value="filter">
+      <label for="feature4">Filtering Options</label>
+    </fieldset>
+
+    <!-- Textarea -->
+    <label for="comments">Additional comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit Feedback">
+  </form>
+</section>
+
+
+<footer>
+  <p>&copy; 2026 Temple Album Site Plan</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: #1f3a5f;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #f4d35e;
+  color: #1f3a5f;
+}
+
+.gallery {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+article {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
