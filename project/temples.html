@@ -9,10 +9,8 @@
 
   <link rel="stylesheet" href="styles/main.css">
   <script src="scripts/filtered-temples.js" defer></script>
-
 </head>
 <body>
-
 <header>
   <img src="images/lds-logo.png" alt="Church of Jesus Christ of Latter-day Saints logo">
   <nav>
@@ -22,18 +20,27 @@
       <li><a href="form.html">Feedback</a></li>
     </ul>
   </nav>
-   <script src="scripts/filtered-temples.js" defer></script>
 </header>
 
 <main>
   <h1>Browse Temples</h1>
+
+  <!-- Filters -->
+  <div class="filters">
+    <button data-filter="all">All</button>
+    <button data-filter="old">Old</button>
+    <button data-filter="new">New</button>
+    <button data-filter="large">Large</button>
+    <button data-filter="small">Small</button>
+  </div>
+
+  <!-- Temple Container -->
   <section class="gallery" id="temples"></section>
 </main>
 
 <footer>
-  <p>&copy; 2026 Temple Album</p>
+  <p>&copy; <span id="year"></span> Temple Album</p>
   <a href="references.html">References</a>
 </footer>
-
 </body>
 </html>

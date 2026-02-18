@@ -1,48 +1,224 @@
-body {
-  font-family: "Roboto", sans-serif;
+/* ================= ROOT COLORS ================= */
+:root {
+  --primary: #1a3e59;       /* Deep blue for headers, nav, accents */
+  --secondary: #f5f7fa;     /* Soft off-white background */
+  --accent: #d97706;        /* Warm amber/orange for highlights */
+}
+
+/* ================= GLOBAL STYLES ================= */
+* {
+  box-sizing: border-box;
   margin: 0;
-  line-height: 1.6;
-}
-
-header, footer {
-  background-color: #1f3a5f;
-  color: white;
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
   padding: 0;
 }
 
-nav a {
-  color: white;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--secondary);
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
   text-decoration: none;
-  font-weight: 700;
-  padding: 0.5rem 1rem;
+  color: var(--primary);
 }
 
-nav a:hover,
-nav a.active {
-  background-color: #f4d35e;
-  color: #1f3a5f;
+ul {
+  list-style: none;
 }
 
-.gallery {
-  display: grid;
+/* ================= HEADER ================= */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
   gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background-color: #e0efff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .tagline {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 3rem 2rem;
+}
+
+section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+section p {
+  margin-bottom: 1.5rem;
+}
+
+/* ================= IMAGE GRID ================= */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ================= TEMPLE GALLERY ================= */
+.temple-gallery .filters {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.temple-gallery .filters button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.temple-gallery .filters button:hover {
+  background-color: var(--accent);
+}
+
+.temple-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.temple-card {
+  background-color: white;
   padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-@media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.temple-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 0.5rem;
 }
 
-article {
+.temple-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* ================= FORM ================= */
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 1rem;
+}
+
+form input[type="submit"] {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--primary);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primary);
+  color: white;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+/* ================= MEDIA QUERIES ================= */
+@media(max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero .tagline {
+    font-size: 1rem;
+  }
 }

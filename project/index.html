@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/main.css">
-  <script src="scripts/main.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
 
@@ -55,10 +55,9 @@
       Missionaries serve around the world, teaching about Jesus Christ,
       serving communities, and sharing messages of hope, faith, and charity.
     </p>
-
     <div class="image-grid">
       <figure>
-        <img src="images/mormon-missionaries-teaching-woman.jpg" alt="Latter-day Saint missionaries teaching">
+        <img src="images/mormon-missionaries-teaching-woman.jpg" alt="Latter-day Saint missionaries teaching" loading="lazy">
         <figcaption>Sharing the gospel of Jesus Christ</figcaption>
       </figure>
     </div>
@@ -71,29 +70,35 @@
       Church members participate in worship services, youth programs,
       family activities, humanitarian service, and community outreach.
     </p>
-
     <div class="image-grid">
       <figure>
-        <img src="images/ldschruchservice.jpg" alt="Church members worshipping together">
+        <img src="images/ldschruchservice.jpg" alt="Church members worshipping together" loading="lazy">
         <figcaption>Weekly worship and fellowship</figcaption>
       </figure>
     </div>
   </section>
 
   <!-- TEMPLES GALLERY -->
-  <section class="gallery">
+  <section class="temple-gallery">
     <h2>Temples Around the World</h2>
-    <p>
-      Temples are sacred places where individuals draw closer to God,
-      make eternal covenants, and find peace and inspiration.
-    </p>
+    <p>Filter temples by age or size:</p>
+
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="old">Old (Before 1900)</button>
+      <button data-filter="new">New (After 2000)</button>
+      <button data-filter="large">Large (Area > 90,000 sq ft)</button>
+      <button data-filter="small">Small (Area < 10,000 sq ft)</button>
+    </div>
+
+    <div id="temples" class="temple-container">
+      <!-- Temples will be inserted dynamically via JS -->
+    </div>
   </section>
 </main>
 
-
-
 <footer>
-  <p>&copy; 2026 Temple Album</p>
+  <p>&copy; <span id="year"></span> Temple Album</p>
   <a href="references.html">References</a>
 </footer>
 
